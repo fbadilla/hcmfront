@@ -1,16 +1,19 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<div class="container">
+		<div class="row justify-content-md-center">
+		<div class="col-md">
+<p class="text-light bg-dark"><strong>identificacion: </strong>{{ object.id }} </p>
+<p class="text-light bg-dark"><strong>Nombre del Turno: </strong>{{ object.nombre }} </p>
+<p class="text-light bg-dark"><strong>Codigo: </strong>{{ object.codigo }} </p>
+<p class="text-light bg-dark"><strong>Fecha de Inicio: </strong>{{ object.inicio }} </p>
+<p class="text-light bg-dark"><strong>Fecha de Termino: </strong>{{ object.termino }} </p>
 
-<p><strong>identificacion: </strong>{{ object.id }} </p>
-<p><strong>Nombres: </strong>{{ object.nombres }} </p>
-<p><strong>Apellidos: </strong>{{ object.apellidos }} </p>
-<p><strong>Fecha de Nacimiento: </strong>{{ object.fecha_nacimiento }} </p>
-<p><strong>email: </strong>{{ object.email }} </p>
-<p><strong>Deporte: </strong>{{ object.deporte }} </p>
-
-<a class= "btn btn-success" href="{% url 'jugadores:jugador_listar' %}">Ok</a>
-<a class= "btn btn-primary" href="{% url 'jugadores:jugador_editar' object.id%}">Editar</a>
-<a class="btn btn-danger" href="{% url 'jugadores:jugador_eliminar' object.id %}">Eliminar</a>
-
+<a class= "btn btn-success" href="{% url 'sistematurnos:Turno_listar' %}">Ok</a>
+<a class= "btn btn-primary" href="{% url 'sistematurnos:Turno_editar' object.id%}">Editar</a>
+<a class="btn btn-danger" href="{% url 'sistematurnos:Turno_eliminar' object.id %}">Eliminar</a>
+		</div>
+        </div>
+        </div>
 {% endblock %}
