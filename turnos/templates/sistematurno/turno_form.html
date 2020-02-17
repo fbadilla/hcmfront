@@ -7,6 +7,9 @@
 <form method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
+    <div class="row">
+    <span>Ctrl o cmd para elegir varios dias</span>
+</div>
 	<button class="btn btn-success" type="submit">Guardar</button>
 	<a class= "btn btn-primary" href="{% url 'sistematurnos:Turno_listar' %}">Cancelar</a>
 </form>

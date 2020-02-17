@@ -10,6 +10,7 @@
 			<td>#</td>
 			<td>Nombre</td>
 			<td>codigo</td>
+            <td>Dias</td>
 			<td>inicio</td>
 			<td>termino</td>
 			<td>Acciones</td>
@@ -23,6 +24,7 @@
 			<td>{{ turno.id }}</td>
 			<td>{{ turno.nombre }}</td>
 			<td>{{ turno.codigo }}</td>
+            <td>{{ turno.dias.all|join:','}}</td>
 			<td>{{ turno.inicio }}</td>
 			<td>{{ turno.termino }}</td>
 			<td>

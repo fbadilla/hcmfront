@@ -7,6 +7,7 @@
 <p class="text-light bg-dark"><strong>identificacion: </strong>{{ object.id }} </p>
 <p class="text-light bg-dark"><strong>Nombre del Turno: </strong>{{ object.nombre }} </p>
 <p class="text-light bg-dark"><strong>Codigo: </strong>{{ object.codigo }} </p>
+<p class="text-light bg-dark"><strong>Codigo: </strong>{{ object.dias.all|join:','}} </p>
 <p class="text-light bg-dark"><strong>Fecha de Inicio: </strong>{{ object.inicio }} </p>
 <p class="text-light bg-dark"><strong>Fecha de Termino: </strong>{{ object.termino }} </p>
 
