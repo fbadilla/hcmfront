@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
 # Create your models here.
 class Dia(models.Model):
 	id = models.AutoField(primary_key=True)
@@ -17,5 +16,5 @@ class Turno(models.Model):
 	inicio = models.TimeField( blank=True, null=True)
 	termino = models.TimeField( blank=True, null=True)
 	dias = models.ManyToManyField(Dia, related_name="dias")
-	def __str__(self):
+	def __str__(self, encoding='utf-8'):
 		return '{}'.format(self.nombre)
