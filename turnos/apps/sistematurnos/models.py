@@ -5,9 +5,11 @@ from django.db import models
 import myFields
 
 # Create your models here.
-class Dias(models.Model):
+class Dia(models.Model):
 	id = models.AutoField(primary_key=True)
-	dayOfTheWeek = myFields.DayOfTheWeekField()
+	dia = models.CharField(max_length=30, default="")
+	def __str__(self):
+		return '{}'.format(self.dia)
 
 class Turno(models.Model):
 	id = models.AutoField(primary_key=True)
@@ -15,6 +17,6 @@ class Turno(models.Model):
 	codigo = models.CharField(max_length=70, default='' )
 	inicio = models.TimeField( blank=True, null=True)
 	termino = models.TimeField( blank=True, null=True)
-	dayOfTheWeek = myFields.DayOfTheWeekField()
+	dias = models.ManyToManyField(Dia)
 	def __str__(self):
 		return '{}'.format(self.nombre)
